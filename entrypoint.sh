@@ -7,8 +7,7 @@ cat << EOF > /etc/xray/config.json
 {
   "inbounds": [
     {
-      "listen": "0.0.0.0",
-      "port": 80,
+      "port": $PORT,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -19,7 +18,6 @@ cat << EOF > /etc/xray/config.json
       },
        "streamSettings": {
         "network": "ws"
-        "security": "none"
       }
     }
   ],
